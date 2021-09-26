@@ -44,10 +44,18 @@
         padding: 5%;
     }
 
-    .rotate{
-        top: 58%;
-        left: 75%;
-        transform: matrix(0.62, 0.79, 0.79, -0.62, 0, 0);
+    input{
+        width: 100%;
+    }
+
+    .div-foreground{
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        
+    }
+
+    .position-bottom{
+        left: 380px;
+        bottom: -2em;
     }
 
     .form-button button{
@@ -61,5 +69,27 @@
 
     .form-button .text-16px-500{
         margin: 5px 0 0 5px;
+    }
+
+    .div-foreground-form{
+        display: none;
+    }
+
+    .wrapper-title-form .div-foreground{
+        display: block;
+    }
+
+    .grid-form{
+        gap: 1em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .span{
+        grid-column: 1 /1;
+    }
+    
+    select{
+        width: 86%;
     }
   }

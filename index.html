@@ -21,8 +21,13 @@
     <div class="content">
         <div class="wrapper-profile">
             <div class="wrapper-profile-items">
-                <img src="img/profile.svg" class="photo">
-                <div class="rotate"></div>
+                <div class="profile-img">
+                    <img src="img/profile.svg" class="photo">
+                    <div class="div-foreground position-bottom">
+                        <div class="div-sm"></div>
+                        <div class="div-lg"></div>
+                    </div>
+                </div>
                 <div class="info-profile">
                     <div class="text-56px-800">
                         Jane Doe
@@ -54,15 +59,32 @@
         </div>
 
         <div class="wrapper-form">
-            <div class="text-40px-800">Tell us about yourself</div>
+            <div class="div-foreground-form position-right">
+                <div class="div-md"></div>
+                <div class="div-sm"></div>
+                <div class="div-lg"></div>
+            </div>
 
-            <div class="form-row">
-                <div class="form-column">
-                    <div class="text-14px-600">Your name</div>
-                    <input type="text" placeholder="Tell us your name" class="k">
+            <div class="div-foreground-form transform-background">
+                <div class="div-md"></div>
+                <div class="div-sm"></div>
+                <div class="div-lg"></div>
+            </div>
+
+            <div class="wrapper-title-form">
+                <div class="text-40px-800">Tell us about yourself</div>
+                <div class="div-foreground position-top">
+                    <div class="div-sm"></div>
+                    <div class="div-lg"></div>
                 </div>
+            </div>
 
-                <div class="form-column">
+            <div class="grid-form">
+                <div class="grid-items">
+                    <div class="text-14px-600">Your name</div>
+                    <input type="text" placeholder="Tell us your name">
+                </div>
+                <div class="grid-items">
                     <div class="text-14px-600">Your gender</div>
                     <select required class="select-box">
                         <option value="" hidden disabled selected>Chose your gender</option>
@@ -70,31 +92,30 @@
                         <option>Female</option>
                     </select>
                 </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-column">
+                <div class="grid-items">
+                    
+                </div>
+                <div class="grid-items">
                     <div class="text-14px-600">Your country</div>
                     <input type="text" placeholder="Where are you from?">
                 </div>
-
-                <div class="form-column">
+                <div class="grid-items">
                     <div class="text-14px-600">Your City</div>
                     <input type="text" placeholder="Your native city">
                 </div>
-
-                <div class="form-column">
+                <div class="grid-items">
                     <div class="text-14px-600">Your date of birth</div>
-                    <input type="text" placeholder="Where are you from?">
+                    <input type="date" placeholder="dd.mm.yyyy" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                </div>
+                <div class="grid-items span">
+                    <div class="loading">
+                        <div class="text-16px-500 text-loading">Proof your identity with some documents</div>
+                        <button class="text-16px-500 button-add">Add document</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="loading">
-                <div class="form-row">
-                    <div class="text-16px-500 text-loading">Proof your identity with some documents</div>
-                    <button class="text-16px-500 button-add">Add document</button>
-                </div>
-            </div>
+
 
             <div class="file">
                 <div class="file-name">
