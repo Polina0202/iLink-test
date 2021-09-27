@@ -6,17 +6,20 @@
   <link rel="stylesheet" href="style/custom.css" />
   <link rel="stylesheet" href="style/fonts-style.css" />
   <link rel="stylesheet" href="style/media.css" />
-  <script src="js/script-form.js"></script>
+  <script src="js/script-form-visibility.js"></script>
+  <script src="js/script-loading.js"></script>
+  <script src="js/script-form-validation.js"></script>
 </head>
 <body>
     <nav>
         <img src="img/logo.svg" alt="Logo" class="nav-logo">
         <span class="nav-menu">
-            <a href="">Jane Doe</a>
-            <a href="">Tell us about yourself</a>
-            <a href="">Slider</a>
+            <a href="#">Jane Doe</a>
+            <a href="#aboutYourself">Tell us about yourself</a>
+            <a href="#footer">Slider</a>
         </span>
     </nav>
+    <div class="under-nav"></div>
     
     <div class="content">
         <div class="wrapper-profile">
@@ -58,7 +61,7 @@
             </div>
         </div>
 
-        <div class="wrapper-form">
+        <div class="wrapper-form" id="aboutYourself">
             <div class="div-foreground-form position-right">
                 <div class="div-md"></div>
                 <div class="div-sm"></div>
@@ -82,35 +85,36 @@
             <div class="grid-form">
                 <div class="grid-items">
                     <div class="text-14px-600">Your name</div>
-                    <input type="text" placeholder="Tell us your name">
+                    <input type="text" placeholder="Tell us your name" class="form-main-block input-text"/>
                 </div>
                 <div class="grid-items">
                     <div class="text-14px-600">Your gender</div>
-                    <select required class="select-box">
+                    <select required class="form-main-block">
                         <option value="" hidden disabled selected>Chose your gender</option>
-                        <option>Male</option>
-                        <option>Female</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
                     </select>
                 </div>
                 <div class="grid-items">
                     
                 </div>
                 <div class="grid-items">
-                    <div class="text-14px-600">Your country</div>
-                    <input type="text" placeholder="Where are you from?">
+                    <div class="form-block text-14px-600">Your country</div>
+                    <input type="text" placeholder="Where are you from?" class="form-block input-text">
                 </div>
                 <div class="grid-items">
-                    <div class="text-14px-600">Your City</div>
-                    <input type="text" placeholder="Your native city">
+                    <div class="form-block text-14px-600">Your City</div>
+                    <input type="text" placeholder="Your native city" class="form-block input-text">
                 </div>
                 <div class="grid-items">
-                    <div class="text-14px-600">Your date of birth</div>
-                    <input type="date" placeholder="dd.mm.yyyy" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                    <div class="form-block text-14px-600">Your date of birth</div>
+                    <input type="date" placeholder="dd.mm.yyyy" class="form-block input-date" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
                 </div>
                 <div class="grid-items span">
                     <div class="loading">
                         <div class="text-16px-500 text-loading">Proof your identity with some documents</div>
-                        <button class="text-16px-500 button-add">Add document</button>
+                        <button class="text-16px-500 button-add"  onclick="document.getElementById('file-input').click();">Add document</button>
+                        <input id="file-input" type="file" name="name" style="display: none;" multiple accept="image/*,image/jpeg"/>
                     </div>
                 </div>
             </div>
@@ -119,13 +123,11 @@
 
             <div class="file">
                 <div class="file-name">
-                    <div class="file-img"></div>
+                    <div class="file-img"><img src="" width="100%" style="display:none;" class="file-mini-img"></div>
                     <div>
-                        <div class="text-14px-400">
-                            File_name_001
+                        <div class="text-14px-400 file-title">
                         </div>
-                        <div class="text-12px">
-                            JPG 2,5 mb
+                        <div class="text-12px file-param">
                         </div>
                     </div>
                 </div>
@@ -133,14 +135,22 @@
             </div>
 
             <div class="form-button">
-                <button>Send info</button>
+                <button class="btn">Send info</button>
                 <img src="img/completed.svg" class="completed">
-                <div class="text-16px-500">Completed</div>
+                <div class="text-16px-500 completed">Completed</div>
             </div>
 
         </div>
 
-        <div class="slider">Слайдер</div>
+        <div class="slider" id="footer">
+            <div class="slide">
+                <img src="img/slide.jpg">
+                <div class="slide-title">
+                    <div class="text-56px-800">Slide this photo</div>
+                    <div class="text-18px-500">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</div>
+                </div>
+            </div>
+        </div>
     </div>
  
 </body>
