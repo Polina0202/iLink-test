@@ -19,5 +19,5 @@ window.addEventListener("load", function()
   function Clear(){
     this.type='text';
   }
-  document.querySelectorAll('.input-date').addEventListener('onload', Clear);
+  document.querySelector('.input-date').addEventListener('onload', Clear);
 });

@@ -58,9 +58,8 @@ button{
     background: #E0CFF8;
     width: 115px;
     height: 115px;
-    transform: rotate(47.56deg);
+    transform: rotate(47.56deg) translateX(-29px);
     border-radius: 16px;
-    margin-left: -10%;
 }
 
 .div-foreground-form .div-md{
@@ -68,8 +67,7 @@ button{
     border-radius: 32px;
     width: 170px;
     height: 170px;
-    transform: rotate(15deg);
-    margin-left: 50%;
+    transform: rotate(15deg) translateX(145px);
 }
 
 .div-foreground-form .div-lg{
@@ -77,8 +75,7 @@ button{
     border-radius: 32px;
     width: 290px;
     height: 290px;
-    transform: rotate(30deg);
-    margin: 30% 0 0 10%;
+    transform: translate(29px, 40px) rotate(30deg);
 }
 
 .div-foreground-form{
@@ -245,6 +242,7 @@ text-18px-500{
 .wrapper-form{
     width: 100%;
     padding: 5em 7% 5em 5em;
+    box-sizing: border-box;
 }
 
 .text-40px-800{
@@ -445,23 +443,65 @@ select:invalid:not(:focus) {
     padding: 3.5em 5%;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 }
 
-.slider img{
+.slide {
+    display: grid;
+    align-items: center;
+}
+
+.background{
     display: block;
     width: 100%;
-    z-index: -1;
+    grid-area: 1 / 1;
+    
+    border-radius: 32px;
+}
+
+.slide-row{
+    margin: 0 5%;
 }
 
 .slider .text-56px-800, .slider .text-18px-500{
-    background-color: crimson;
-    position: absolute;
+    padding: 0 25%;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.flex-slide{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-items{
+    width: 500%;
 }
 
 .slide-title{
-    z-index: 1;
+    grid-area: 1 / 1;
 }
 
+.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    border: 2px solid white;
+}
 
+.circle:nth-child(1){
+    background: white;
+}
 
-  
+.circle:nth-child(2){
+    margin: 0 1em;
+}
+
+.flex-circle{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+}
