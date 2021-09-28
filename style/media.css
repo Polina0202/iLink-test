@@ -80,6 +80,7 @@
     }
 
     .grid-form{
+        width: 100%;
         gap: 1em;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;

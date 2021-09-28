@@ -263,7 +263,7 @@ text-18px-500{
 
 .grid-form{
     display: grid;
-    width: 70%;
+    width: 80%;
     gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
